@@ -1,23 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from "react";
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { AuthCotext } from "../../Provider/AuthProvider";
-import {
-  GoogleAuthProvider,
-  getAuth,
-  signInWithPopup,
-  GithubAuthProvider,
-} from "firebase/auth";
-import app from "../../../Firebase/firebase.config";
 
 const Login = () => {
   const [error, setError] = useState("");
   const { signIn } = useContext(AuthCotext);
-  // console.log(signIn);
-  const navigate = useNavigate();
-  const location = useLocation();
-  console.log("login page location", location);
-  const from = location.state?.from?.pathname || "/";
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -31,7 +19,6 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
-        navigate(from, { replace: true });
         form.reset("");
       })
       .catch((error) => {

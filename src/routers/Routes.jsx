@@ -3,6 +3,7 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Main from '../Layouts/Main/Main';
 import Login from '../Layouts/Login/Login';
+import Registration from '../Layouts/Registration/Registration';
 
 const router = createBrowserRouter([
     {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
         {
             path:"login",
             element:<Login></Login>,
+        },
+        {
+            path:"registration",
+            element:<Registration></Registration>,
         },
       ]
       

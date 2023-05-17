@@ -69,7 +69,7 @@ const Login = () => {
               <button className="btn btn-primary">Login</button>
             </div>
           </form>
-          <Link to="/register" className="link link-primary">
+          <Link to="/registration" className="link link-primary">
             Reister Now
           </Link>
         </div>

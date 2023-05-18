@@ -6,6 +6,7 @@ import Login from '../Layouts/Login/Login';
 import Registration from '../Layouts/Registration/Registration';
 import ErrorPage from '../Layouts/ErrorPage/ErrorPage';
 import ToyForm from '../Layouts/AddToy/ToyForm';
+import Home from '../Layouts/Home/Home';
 
 const router = createBrowserRouter([
     {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
       element:<Main></Main>,
       errorElement:<ErrorPage></ErrorPage>,
       children:[
+        {
+            path:"/",
+            element:<Home></Home>,
+        },
         {
             path:"login",
             element:<Login></Login>,

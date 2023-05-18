@@ -3,13 +3,14 @@ import React, { useContext, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import { AuthCotext } from "../../Provider/AuthProvider";
+import logo from "../../assets/images/logo.jpg"
 
 const NavBar = () => {
 
 
   const { user, logOut } = useContext(AuthCotext);
   const [showName, setShowName] = useState(false); 
-  console.log(user);
+  // console.log(user);
 
   const handleLogOut = () => {
     logOut()
@@ -18,7 +19,7 @@ const NavBar = () => {
   }
   return (
     <div>
-<div className="navbar bg-base-100">
+<div className="navbar font-semibold text-xl">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -62,7 +63,10 @@ const NavBar = () => {
       </ul>
     </div>
 
-    <Link className="btn btn-ghost normal-case text-xl">daisyUI</Link>
+   <div className=" flex items-center">
+    <img className=" h-12 rounded-full" src={logo} alt="" />
+   <Link className="btn btn-ghost text-amber-500 normal-case text-3xl">Toy Cars</Link>
+   </div>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -104,7 +108,7 @@ const NavBar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <Link className="btn">Get started</Link>
+    <Link className="btn btn-warning">Get started</Link>
   </div>
 </div>
     <Outlet></Outlet>

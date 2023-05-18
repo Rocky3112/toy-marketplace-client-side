@@ -1,11 +1,15 @@
-import React from "react";
+
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { AuthCotext } from "../../Provider/AuthProvider";
 
 const ToyForm = () => {
   const { register, handleSubmit } = useForm();
+  const {user} = useContext(AuthCotext)
+  console.log(user);
 
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     
 
     fetch("http://localhost:5000/postToy", {
@@ -22,7 +26,7 @@ const ToyForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className=" bg-slate-300 p-10 rounded shadow-xl">
+    <form onSubmit={handleSubmit(onSubmit)} className=" bg-slate-200 p-10 rounded shadow-xl">
       <div className=" flex items-center justify-between gap-6">
         <div className=" grid gap-5">
           <label htmlFor="pictureUrl">Picture URL:</label>
@@ -36,7 +40,7 @@ const ToyForm = () => {
         </div>
         <div className=" grid gap-5">
           <label htmlFor="sellerEmail">Seller Email:</label>
-          <input type="email" id="sellerEmail" {...register("sellerEmail")} />
+          <input type="email" id="sellerEmail" defaultValue={user.email} {...register("sellerEmail")} />
 
           <label htmlFor="subCategory">Sub-category:</label>
           <select id="subCategory" {...register("subCategory")}>

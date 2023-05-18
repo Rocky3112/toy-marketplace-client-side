@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import error from "../../assets/images/404-error.jpg"
 
 const ErrorPage = () => {
     const navigate = useNavigate();
@@ -8,7 +9,8 @@ const ErrorPage = () => {
         navigate("/");
     }
     return (
-        <div>
+        <div className=''>
+            <img className=' w-96 mx-auto' src={error} alt="" />
             <div className='mt-10 flex items-center justify-center'>
             <h1 className=' text-4xl font-semibold'>404 Page Not Found</h1><br />
             

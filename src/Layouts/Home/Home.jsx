@@ -8,7 +8,7 @@ import Collection from "./Collection"
 const Home = () => {
   return (
     <div>
-      <div className="carousel carousel-center  lg:h-[100vh] p-4 space-x-4 bg-neutral-300 rounded-box mx-auto">
+      <div className="carousel carousel-center  lg:h-[100vh] p-4 space-x-4 bg-neutral-300 rounded-box mx-auto my-10">
         <div className="carousel-item">
           <img
             src={img1}

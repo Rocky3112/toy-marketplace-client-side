@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const ErrorPage = () => {
     const navigate = useNavigate();
     const handleBtnBackPage =()=>{
-        navigate(-1);
+        navigate("/");
     }
     return (
         <div>

@@ -1,9 +1,21 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import Footer from "../Footer/Footer";
+import { AuthCotext } from "../../Provider/AuthProvider";
 
 const NavBar = () => {
+
+
+  const { user, logOut } = useContext(AuthCotext);
+  const [showName, setShowName] = useState(false); 
+  console.log(user);
+
+  const handleLogOut = () => {
+    logOut()
+      .then()
+      .catch(error => console.log(error));
+  }
   return (
     <div>
 <div className="navbar bg-base-100">
@@ -20,10 +32,36 @@ const NavBar = () => {
           </Link>
         </li>
         <li><Link>My Toys</Link></li>
-        <li><Link to ="/login">Login</Link></li>
         <li><Link>Blog</Link></li>
+        <Link className=" flex items-center gap-6"
+              onMouseEnter={() => setShowName(true)} 
+              onMouseLeave={() => setShowName(false)} 
+            >
+              <div className=" w-full relative">
+                {user && (
+                  <img className=" w-12 rounded-full" src={user.photoURL} alt="" />
+                )}
+                {showName && user && ( 
+                  <div className="absolute top-0 left-0 bg-white rounded-md py-1 px-2 shadow-md">
+                    {user.displayName}
+                  </div>
+                )}
+              </div>
+              {user ? (
+                <div>
+                  <Link onClick={handleLogOut} variant="secondary">
+                    Logout
+                  </Link>
+                </div>
+              ) : (
+                <Link to="/login">
+                  Login
+                </Link>
+              )}
+            </Link>
       </ul>
     </div>
+
     <Link className="btn btn-ghost normal-case text-xl">daisyUI</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -34,8 +72,34 @@ const NavBar = () => {
         </Link>
       </li>
       <li><Link>My Toys</Link></li>
-      <li><Link to ="/login">Login</Link></li>
+      <li><Link to ="/toyform">Add a Toy</Link></li>
       <li><Link>Blog</Link></li>
+      <Link className=" flex items-center gap-6"
+              onMouseEnter={() => setShowName(true)} 
+              onMouseLeave={() => setShowName(false)} 
+            >
+              <div className=" w-full relative">
+                {user && (
+                  <img className=" w-12 rounded-full" src={user.photoURL} alt="" />
+                )}
+                {showName && user && ( 
+                  <div className="absolute top-0 left-0 bg-white rounded-md py-1 px-2 shadow-md">
+                    {user.displayName}
+                  </div>
+                )}
+              </div>
+              {user ? (
+                <div>
+                  <Link onClick={handleLogOut} variant="secondary">
+                    Logout
+                  </Link>
+                </div>
+              ) : (
+                <Link to="/login">
+                  Login
+                </Link>
+              )}
+            </Link>
 
     </ul>
   </div>

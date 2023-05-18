@@ -5,6 +5,7 @@ import Main from '../Layouts/Main/Main';
 import Login from '../Layouts/Login/Login';
 import Registration from '../Layouts/Registration/Registration';
 import ErrorPage from '../Layouts/ErrorPage/ErrorPage';
+import ToyForm from '../Layouts/AddToy/ToyForm';
 
 const router = createBrowserRouter([
     {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
         {
             path:"registration",
             element:<Registration></Registration>,
+        },
+        {
+            path:"toyform",
+            element:<ToyForm></ToyForm>,
         },
       ]
       

@@ -7,7 +7,7 @@ import SingleToy from "./SingleToy";
 const Category = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [toyData, setToyData] = useState([]);
-  console.log(toyData);
+//   console.log(toyData);
   // const {price}= toyData
   useEffect(() => {
     fetchToyData();
@@ -15,7 +15,7 @@ const Category = () => {
 
   const fetchToyData = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/allToy/`); // Replace with your backend API endpoint
+      const response = await fetch(`http://localhost:5000/allToy`); 
       const data = await response.json();
       setToyData(data);
     } catch (error) {
@@ -30,7 +30,7 @@ const Category = () => {
 const result = toyData?.filter((toy)=>toy.subCategory == (activeTab == 0 ? 'Mini Truck' : (activeTab == 1 ? 'Sport Car': 'Regular Car')));
 
 // setToyData(result);
-console.log(result);
+// console.log(result);
   return (
     <div className="container mx-auto p-4">
       <TabList className="flex mb-4">

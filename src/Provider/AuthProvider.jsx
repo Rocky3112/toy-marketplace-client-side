@@ -9,6 +9,7 @@ export const AuthCotext =createContext(null)
 const auth = getAuth(app)
 const AuthProvider = ({children}) => {
     const [user, setUser]= useState(null)
+    const [loading, setloading] = useState(true)
 
     const createUser =(email, password)=>{
         return createUserWithEmailAndPassword(auth, email, password)
@@ -31,8 +32,9 @@ const AuthProvider = ({children}) => {
 
     useEffect(()=>{
        const unsubscribe= onAuthStateChanged(auth, currentUser =>{
-            console.log('auth change', currentUser)
+            // console.log('auth change', currentUser)
             setUser(currentUser)
+            setloading(false)
             
         })
         return ()=>{
@@ -45,7 +47,8 @@ const AuthProvider = ({children}) => {
         createUser,
         signIn,
         logOut,
-        updateUser
+        updateUser,
+        loading
     }
     return (
         <AuthCotext.Provider value={userInfo}>

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { AuthCotext } from "../Provider/AuthProvider";
 
 /* eslint-disable react/prop-types */
@@ -25,13 +25,19 @@ const SingleToy = ({ toy }) => {
           <p>Rating :{rating}</p>
           </div>
           <div className="card-actions">
-                    {
-                        user ? <Link to={`/chefdetails/${toy._id}`}>
+                    {/* if(!user){
+                        alert('please login First')
+                        <Navigate
+                           
+                    }
+                      else { */}
+                        <Link to={`/toyDetails/${toy._id}`}>
                         <button className="bg-yellow-500 hover:bg-yellow-600  text-white font-bold py-2 px-4 rounded-full">
                           View Details
                         </button>
-                      </Link>:alert('please login First')
-                    }
+                      </Link>
+                      {/* } */}
+                    
                   </div>
         </div>
       </div>

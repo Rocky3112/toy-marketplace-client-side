@@ -9,6 +9,8 @@ import ToyForm from '../Layouts/AddToy/ToyForm';
 import Home from '../Layouts/Home/Home';
 import AllToys from '../Layouts/AllToys/AllToys';
 import Blog from '../Layouts/Blog/Blog';
+import PrivateRoute from './PrivateRoute';
+import ToyDetails from '../Layouts/AllToys/ToyDetails';
 
 const router = createBrowserRouter([
     {
@@ -41,9 +43,9 @@ const router = createBrowserRouter([
             element:<AllToys></AllToys>,
         },
         {
-          path: "/chefdetails/:id",
-          element: <PrivateRoute><ChefDetails></ChefDetails></PrivateRoute>,
-          loader: ({ params }) =>fetch(`https://chef-recipe-hunting-server-rocky3112.vercel.app/chef/${params.id}`),
+          path: "/toyDetails/:id",
+          element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
+          // loader: ({ params }) =>fetch(`http://localhost:5000/allToy/${params.id}`),
         },
       ]
       

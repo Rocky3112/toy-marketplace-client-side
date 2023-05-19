@@ -1,6 +1,6 @@
 const Blog = () => {
   return (
-    <div className=" m-20 p-16 bg-slate-200 shadow-2xl rounded-xl">
+    <div className=" m-20 p-16 bg-slate-100 shadow-2xl rounded-xl">
       <div className=" text-left container">
         <h1 className=" text-xl">
           1.What is an access token and refresh token? How do they work and

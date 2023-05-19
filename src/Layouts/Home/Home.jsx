@@ -4,6 +4,7 @@ import img3 from "../../assets/images/img3.webp";
 import img4 from "../../assets/images/img4.webp";
 import img5 from "../../assets/images/img5.jpeg";
 import Collection from "./Collection";
+import Category from "../../Category/Category";
 const Home = () => {
   return (
     <div className="">
@@ -45,6 +46,7 @@ const Home = () => {
       </div>
 
       <Collection></Collection>
+      <Category></Category>
     </div>
   );
 };

@@ -9,7 +9,7 @@ const ToyForm = () => {
   console.log(user);
 
   const onSubmit = (data) => {
-    // console.log(data);
+    console.log(data);
     
 
     fetch("http://localhost:5000/postToy", {
@@ -44,9 +44,9 @@ const ToyForm = () => {
 
           <label htmlFor="subCategory">Sub-category:</label>
           <select id="subCategory" {...register("subCategory")}>
-            <option value="Math Toys">Math Toys</option>
-            <option value="Language Toys">Language Toys</option>
-            <option value="Science Toys">Science Toys</option>
+            <option value="Mini Truck">Mini Truck</option>
+            <option value="Sport Car">Sport Car</option>
+            <option value="Regular Car">Regular Car</option>
           </select>
 
           <label htmlFor="price">Price:</label>

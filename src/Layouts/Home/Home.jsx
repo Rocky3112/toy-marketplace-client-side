@@ -14,7 +14,7 @@ const Home = () => {
             Assets Today!
           </h1>
           <div className=" lg:flex items-center py-6 lg:gap-10">
-            <button className="bg-amber-500 hover:bg-blue-500 text-white font-semibold py-3 px-4 rounded-full">
+            <button className="bg-amber-500 hover:bg-blue-500 text-white font-semibold py-3 px-5 rounded-full">
               Explore
             </button>
             <button className="bg-blue-500 hover:bg-amber-500 text-white font-semibold py-3 px-4 rounded-2xl">

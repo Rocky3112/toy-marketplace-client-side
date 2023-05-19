@@ -44,7 +44,7 @@ const NavBar = () => {
               <Link to="/">Home</Link>
               </li>
               <li tabIndex={0}>
-                <Link className="justify-between">All Toys</Link>
+                <Link to="/alltoys" className="justify-between">All Toys</Link>
               </li>
               <li>
                 <Link>My Toys</Link>
@@ -97,7 +97,7 @@ const NavBar = () => {
               <Link to="/">Home</Link>
             </li>
             <li tabIndex={0}>
-              <Link to="/toyform">All Toys</Link>
+              <Link to="/alltoys">All Toys</Link>
             </li>
 
             <li>

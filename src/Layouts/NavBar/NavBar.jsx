@@ -50,7 +50,7 @@ const NavBar = () => {
                 <Link>My Toys</Link>
               </li>
               <li>
-                <Link>Blog</Link>
+                <Link to="/blog">Blog</Link>
               </li>
               <Link
                 className=" flex items-center gap-6"
@@ -101,7 +101,7 @@ const NavBar = () => {
             </li>
 
             <li>
-              <Link>Blog</Link>
+              <Link to="/blog">Blog</Link>
             </li>
             {
               user && (

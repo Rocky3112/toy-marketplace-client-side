@@ -8,6 +8,7 @@ import ErrorPage from '../Layouts/ErrorPage/ErrorPage';
 import ToyForm from '../Layouts/AddToy/ToyForm';
 import Home from '../Layouts/Home/Home';
 import AllToys from '../Layouts/AllToys/AllToys';
+import Blog from '../Layouts/Blog/Blog';
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
         {
             path:"registration",
             element:<Registration></Registration>,
+        },
+        {
+            path:"blog",
+            element:<Blog></Blog>,
         },
         {
             path:"toyform",

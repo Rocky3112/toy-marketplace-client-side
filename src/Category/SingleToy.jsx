@@ -1,0 +1,42 @@
+/* eslint-disable no-unused-vars */
+
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthCotext } from "../Provider/AuthProvider";
+
+/* eslint-disable react/prop-types */
+const SingleToy = ({ toy }) => {
+    // console.log(toy);
+    const {user} = useContext(AuthCotext)
+    const {name, pictureUrl, price, rating} = toy
+  return (
+    <div >
+      <div className="card card-compact w-96 bg-base-100 shadow-xl">
+        <figure>
+          <img className=" w-60 h-60"
+            src={pictureUrl}
+            alt="Shoes"
+          />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title">Name: {name}</h2>
+          <div className=" flex text-xl text-left pb-2">
+          <p>Price :{price}</p>
+          <p>Rating :{rating}</p>
+          </div>
+          <div className="card-actions">
+                    {
+                        user ? <Link to={`/chefdetails/${toy._id}`}>
+                        <button className="bg-yellow-500 hover:bg-yellow-600  text-white font-bold py-2 px-4 rounded-full">
+                          View Details
+                        </button>
+                      </Link>:alert('please login First')
+                    }
+                  </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SingleToy;

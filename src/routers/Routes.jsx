@@ -40,6 +40,11 @@ const router = createBrowserRouter([
             path:"alltoys",
             element:<AllToys></AllToys>,
         },
+        {
+          path: "/chefdetails/:id",
+          element: <PrivateRoute><ChefDetails></ChefDetails></PrivateRoute>,
+          loader: ({ params }) =>fetch(`https://chef-recipe-hunting-server-rocky3112.vercel.app/chef/${params.id}`),
+        },
       ]
       
     },

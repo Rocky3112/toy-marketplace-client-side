@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Tab, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import SingleToy from "./SingleToy";
 
 const Category = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -64,7 +65,14 @@ console.log(result);
           Regular Car
         </Tab>
       </TabList>
-     
+     <div className=" grid lg:grid-cols-3 gap-7">
+        {
+            result.map((toy)=> <SingleToy
+            key= {toy._id}
+            toy= {toy}
+            ></SingleToy>)
+        }
+     </div>
     </div>
   );
 };

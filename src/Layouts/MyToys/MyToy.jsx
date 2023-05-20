@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from "react";
+import { Link } from "react-router-dom";
 
 const MyToy = ({ toy, handleDelete }) => {
     console.log(toy);
@@ -32,7 +33,9 @@ const MyToy = ({ toy, handleDelete }) => {
               <td>{description}</td>
               <td>
               <button onClick={()=>handleDelete(_id)} className=" btn btn-warning mr-5">Delete</button>
+              <Link to={`/updatetoys/${_id}`}>
               <button className=" btn btn-primary">Edit</button>
+              </Link>
               </td>
             </tr>
         

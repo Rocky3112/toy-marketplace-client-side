@@ -5,6 +5,7 @@ import Toys from "./Toys";
 
 const AllToys = () => {
     const [allToys, setAllToys]= useState([]);
+    const  toy=allToys.slice(0,20)
 
 
     useEffect(()=>{
@@ -17,7 +18,7 @@ const AllToys = () => {
     return (
         <div className=" my-20">
             {
-                allToys.map((toys)=> <Toys
+                toy.map((toys)=> <Toys
                 key ={toys._id}
                 toys={toys}
                 ></Toys>)

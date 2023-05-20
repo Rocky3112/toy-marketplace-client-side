@@ -2,7 +2,7 @@
 
 import { useContext } from "react";
 import { Link, Navigate } from "react-router-dom";
-import { AuthCotext } from "../Provider/AuthProvider";
+import { AuthCotext } from "../../Provider/AuthProvider";
 
 /* eslint-disable react/prop-types */
 const SingleToy = ({ toy }) => {

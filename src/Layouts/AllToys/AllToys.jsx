@@ -8,7 +8,7 @@ const AllToys = () => {
 
 
     useEffect(()=>{
-        fetch('http://localhost:5000/allToy')
+        fetch('https://toy-marketplace-server-side-three.vercel.app/allToy')
         .then(res=> res.json())
         .then(data=>{
             setAllToys(data);

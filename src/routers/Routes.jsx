@@ -45,12 +45,12 @@ const router = createBrowserRouter([
         },
         {
             path:"mytoy",
-            element:<MyToys></MyToys>,
+            element:<PrivateRoute><MyToys></MyToys></PrivateRoute>,
         },
         {
           path: "/toyDetails/:id",
           element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-          // loader: ({ params }) =>fetch(`http://localhost:5000/allToy/${params.id}`),
+          // loader: ({ params }) =>fetch(`https://toy-marketplace-server-side-three.vercel.app/allToy/${params.id}`),
         },
       ]
       

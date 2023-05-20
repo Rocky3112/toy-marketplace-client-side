@@ -15,7 +15,7 @@ const Category = () => {
 
   const fetchToyData = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/allToy`); 
+      const response = await fetch(`https://toy-marketplace-server-side-three.vercel.app/allToy`); 
       const data = await response.json();
       setToyData(data);
     } catch (error) {

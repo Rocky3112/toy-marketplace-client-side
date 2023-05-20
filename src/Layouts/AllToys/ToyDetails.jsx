@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import Details from "./Details";
 
 const ToyDetails = () => {
   // const details = useLoaderData();
@@ -9,7 +8,7 @@ const ToyDetails = () => {
   const [details, setDetails] = useState("");
   const { id } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:5000/allToy/${id}`)
+    fetch(`https://toy-marketplace-server-side-three.vercel.app/allToy/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setDetails(data);

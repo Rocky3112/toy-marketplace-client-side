@@ -6,13 +6,12 @@ import { AuthCotext } from "../../Provider/AuthProvider";
 const ToyForm = () => {
   const { register, handleSubmit } = useForm();
   const {user} = useContext(AuthCotext)
-  console.log(user);
+  // console.log(user);
 
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     
-
-    fetch("http://localhost:5000/postToy", {
+    fetch("https://toy-marketplace-server-side-three.vercel.app/postToy", {
       method:"POST",
       headers:{
         'content-type':'application/json'
@@ -22,6 +21,9 @@ const ToyForm = () => {
     .then(res=> res.json())
     .then(data=>{
       console.log(data);
+      if(data.insertedId>0){
+        alert('successfully Added')
+      }
     })
   };
 

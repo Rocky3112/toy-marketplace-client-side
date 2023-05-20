@@ -1,9 +1,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
-const Toys = ({toys}) => {
+import { useContext } from "react";
+import { AuthCotext } from "../../Provider/AuthProvider";
 
-    const {pictureUrl,price,rating,name,quantity,sellerName,subCategory} = toys
+const Toys = ({toys}) => {
+  const {user}=useContext(AuthCotext)
+
+    const {price,name,quantity,sellerName,subCategory} = toys
     return (
         <div className="">
             <div className="container mx-auto p-2">

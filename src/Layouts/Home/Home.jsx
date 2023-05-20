@@ -7,7 +7,7 @@ import Collection from "./Collection";
 import Category from "../../Category/Category";
 const Home = () => {
   return (
-    <div className="">
+    <div className="my-20">
       <div className=" lg:flex items-center justify-between gap-10 ">
         <div className=" px-12 font-semibold text-left">
           <h1 className=" text-7xl">

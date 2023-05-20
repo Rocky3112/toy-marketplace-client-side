@@ -47,11 +47,20 @@ const NavBar = () => {
                 <Link to="/alltoys" className="justify-between">All Toys</Link>
               </li>
               <li>
-                <Link>My Toys</Link>
-              </li>
-              <li>
                 <Link to="/blog">Blog</Link>
               </li>
+              {
+              user && (
+                <div className=" flex">
+                   <li>
+                    <Link to="/mytoy">My Toys</Link>
+                  </li>
+                  <li>
+                    <Link to="/toyform">Add a Toy</Link>
+                  </li>
+                </div>
+              )
+            }
               <Link
                 className=" flex items-center gap-6"
                 onMouseEnter={() => setShowName(true)}
@@ -107,7 +116,7 @@ const NavBar = () => {
               user && (
                 <div className=" flex">
                    <li>
-                    <Link>My Toys</Link>
+                    <Link to="/mytoy">My Toys</Link>
                   </li>
                   <li>
                     <Link to="/toyform">Add a Toy</Link>

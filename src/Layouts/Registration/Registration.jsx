@@ -16,10 +16,9 @@ const Registration = () => {
     const password= form.password.value;
     const photo= form.photo.value;
 
-    console.log(name ,email, password)
 
     if(password.length<6){
-      setError("Password must be six characters");
+      setError("Password must be 6 char");
       
       return;
     }
@@ -45,9 +44,9 @@ const Registration = () => {
     return (
         <div>
             <div className="hero min-h-screen">
-  <div className="hero-content flex-col">
+  <div className=" flex-col w-96 my-10 bg-slate-200 rounded-lg">
     <div className="text-center">
-      <h1 className="text-5xl font-bold">Register now!</h1>
+      <h1 className="text-5xl font-bold text-amber-500">Register now!</h1>
       
     </div>
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl">
@@ -78,7 +77,7 @@ const Registration = () => {
         </div>
         <div className="form-control mt-6">
           <p className=' text-red-400'>{error}</p>
-          <button className="btn btn-primary">Register</button>
+          <button className="btn btn-warning">Register</button>
         </div>
       </form>
       <Link to="/login" className='link link-primary'>

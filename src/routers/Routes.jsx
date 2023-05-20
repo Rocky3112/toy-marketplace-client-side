@@ -11,6 +11,7 @@ import AllToys from '../Layouts/AllToys/AllToys';
 import Blog from '../Layouts/Blog/Blog';
 import PrivateRoute from './PrivateRoute';
 import ToyDetails from '../Layouts/AllToys/ToyDetails';
+import MyToys from '../Layouts/MyToys/MyToys';
 
 const router = createBrowserRouter([
     {
@@ -36,11 +37,15 @@ const router = createBrowserRouter([
         },
         {
             path:"toyform",
-            element:<ToyForm></ToyForm>,
+            element:<PrivateRoute><ToyForm></ToyForm></PrivateRoute>,
         },
         {
             path:"alltoys",
             element:<AllToys></AllToys>,
+        },
+        {
+            path:"mytoy",
+            element:<MyToys></MyToys>,
         },
         {
           path: "/toyDetails/:id",

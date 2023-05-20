@@ -29,9 +29,9 @@ const Login = () => {
 
   return (
     <div className="hero min-h-screen">
-      <div className="hero-content flex-col">
+      <div className=" flex-col w-96 my-10">
         <div className="text-center ">
-          <h1 className="text-5xl font-bold">Login now!</h1>
+          <h1 className="text-5xl font-bold text-amber-500">Login now!</h1>
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl ">
           <form onSubmit={handleLogin} className="card-body">
@@ -42,7 +42,7 @@ const Login = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="email"
+                placeholder="Your Email"
                 className="input input-bordered"
                 required
               />
@@ -54,7 +54,7 @@ const Login = () => {
               <input
                 type="password"
                 name="password"
-                placeholder="password"
+                placeholder="Your Password"
                 className="input input-bordered"
                 required
               />
@@ -66,7 +66,7 @@ const Login = () => {
             </div>
             <div className="form-control mt-6">
               <p className=" text-red-500">{error}</p>
-              <button className="btn btn-primary">Login</button>
+              <button className="btn btn-warning">Login</button>
             </div>
           </form>
           <Link to="/registration" className="link link-primary">

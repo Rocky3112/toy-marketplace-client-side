@@ -42,7 +42,7 @@ const UpdateToys = () => {
           <label htmlFor="name">Name:</label>
           <input type="text" defaultValue={name}  id="name" {...register("name")} />
           <label htmlFor="price">Price:</label>
-          <input type="number" defaultValue={price}  id="price" {...register("price")} />
+          <input type="number" id="price" {...register("price", { valueAsNumber: true })} />
 
         </div>
     

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthCotext } from "../../Provider/AuthProvider";
 import { Link } from "react-router-dom";
 
@@ -10,8 +10,18 @@ const Toys = ({toys}) => {
 
     const {_id,price,name,quantity,sellerName,subCategory} = toys
     
+    // const [searchQuery, setSearchQuery] = useState("");
+
+    // const filteredToys = toys.filter((toy) =>
+    //   toy.toyName.toLowerCase().includes(searchQuery.toLowerCase())
+    // );
+  
+    // const handleSearch = (event) => {
+    //   setSearchQuery(event.target.value);
+    // };
     return (
         <div className="">
+
             <div className="container mx-auto p-2">
       <table className="min-w-full">
         <thead className=" bg-slate-300">

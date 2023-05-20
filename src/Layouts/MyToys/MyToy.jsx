@@ -4,7 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const MyToy = ({ toy, handleDelete }) => {
-    console.log(toy);
+    // console.log(toy);
     const {_id, name,price,quantity,description}=toy;
 
 

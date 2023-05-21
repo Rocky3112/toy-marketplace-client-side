@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { BsStarFill } from "react-icons/bs";
@@ -13,8 +13,8 @@ const BestSellCollection = () => {
     AOS.init({
       duration: 500,
       multiple:true,
-      offset: 200, 
-      delay: 200, 
+      offset: 200, // Offset from the bottom of the window to trigger the animations
+      delay: 100, // Delay before animations start after scrolling
     });
   }, []);
 

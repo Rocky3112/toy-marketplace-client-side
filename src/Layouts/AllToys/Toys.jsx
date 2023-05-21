@@ -10,15 +10,12 @@ const Toys = ({toys}) => {
 
     const {_id,price,name,quantity,sellerName,subCategory} = toys
     
-    // const [searchQuery, setSearchQuery] = useState("");
-
-    // const filteredToys = toys.filter((toy) =>
-    //   toy.toyName.toLowerCase().includes(searchQuery.toLowerCase())
-    // );
-  
-    // const handleSearch = (event) => {
-    //   setSearchQuery(event.target.value);
-    // };
+// const handleViewDetails=event=>{
+//   event.preventDefault();
+//   if(!user){
+//     alert('You have to log in first to view details')
+//   }
+// }
     return (
         <div className="">
 
@@ -43,7 +40,7 @@ const Toys = ({toys}) => {
               <td>{quantity}</td>
               
               <td>
-                <Link to ={`/toyDetails/${_id}`}><button className="bg-amber-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+                <Link to ={`/toyDetails/${_id}`}><button  className="bg-amber-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
                   View Details
                 </button></Link>
               </td>

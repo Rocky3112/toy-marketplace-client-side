@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from "react";
-import { Link} from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate} from "react-router-dom";
 import { AuthCotext } from "../../Provider/AuthProvider";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import app from "../../../Firebase/firebase.config";
 
 const Login = () => {
   const [error, setError] = useState("");
@@ -19,11 +21,36 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         // console.log(loggedUser);
+        navigate(from, { replace: true })
         form.reset("");
       })
       .catch((error) => {
         console.log(error);
         setError("Please enter the correct Email & Password");
+      });
+  };
+
+  //sign in with Google
+
+  const [user, setUser] = useState({});
+  const auth = getAuth(app);
+  const googleProvider = new GoogleAuthProvider();
+  const navigate = useNavigate();
+    const location = useLocation();
+    console.log('login page location', location)
+  const from = location.state?.from?.pathname || '/'
+
+  const handleGoogleLogin = () => {
+    signInWithPopup(auth, googleProvider)
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        console.log(user);
+        navigate(from, { replace: true })
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        console.log(errorMessage);
       });
   };
 
@@ -73,7 +100,18 @@ const Login = () => {
             Reister Now
           </Link>
         </div>
+        <div className="w-50 mt-3 ms-10">
+      <div className="mx-auto">
+        <img
+          onClick={handleGoogleLogin}
+          className=" w-72"
+          src="https://i.ibb.co/gSTHXZJ/google-btn.png"
+          alt=""
+        />
       </div>
+    </div>
+      </div>
+      
     </div>
   );
 };

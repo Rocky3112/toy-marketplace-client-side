@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 import { useContext } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useLocation } from "react-router-dom";
 import { AuthCotext } from "../../Provider/AuthProvider";
 
 /* eslint-disable react/prop-types */
@@ -9,6 +9,15 @@ const SingleToy = ({ toy }) => {
     // console.log(toy);
     const {user} = useContext(AuthCotext)
     const {name, pictureUrl, price, rating} = toy
+    const location = useLocation()
+
+    // const handleViewDetails=event=>{
+    //   event.preventDefault();
+    //   if(!user){
+    //     alert('You have to log in first to view details')
+    //   }
+       
+    // }
   return (
     <div >
       <div className="card card-compact w-96 bg-base-100 shadow-xl">
@@ -31,8 +40,8 @@ const SingleToy = ({ toy }) => {
                            
                     }
                       else { */}
-                        <Link to={`/toyDetails/${toy._id}`}>
-                        <button className="bg-yellow-500 hover:bg-yellow-600  text-white font-bold py-2 px-4 rounded-full">
+                        <Link to={`/toyDetails/${toy._id}`  }>
+                        <button  className="bg-yellow-500 hover:bg-yellow-600  text-white font-bold py-2 px-4 rounded-full">
                           View Details
                         </button>
                       </Link>

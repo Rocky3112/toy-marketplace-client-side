@@ -5,6 +5,7 @@ import img4 from "../../assets/images/img4.webp";
 import img5 from "../../assets/images/img5.jpeg";
 import Collection from "./Collection";
 import Category from "../Category/Category";
+import BestSellCollection from "./BestSellCollection";
 const Home = () => {
   return (
     <div className="my-20">
@@ -47,6 +48,7 @@ const Home = () => {
 
       <Collection></Collection>
       <Category></Category>
+      <BestSellCollection></BestSellCollection>
     </div>
   );
 };

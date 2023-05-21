@@ -39,7 +39,8 @@ const AllToys = () => {
           />
         </div>
             {
-                filteredToys.map((toys)=> <Toys
+                filteredToys.slice(0,20)
+                .map((toys)=> <Toys
                 key ={toys._id}
                 toys={toys}
                 ></Toys>)

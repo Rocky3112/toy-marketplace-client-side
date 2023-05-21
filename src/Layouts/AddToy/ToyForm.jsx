@@ -21,7 +21,7 @@ const ToyForm = () => {
     .then(res=> res.json())
     .then(data=>{
       console.log(data);
-      if(data.insertedId>0){
+      if(data.insertedId){
         alert('successfully Added')
       }
     })

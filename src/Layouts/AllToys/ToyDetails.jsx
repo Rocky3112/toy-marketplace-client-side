@@ -14,12 +14,14 @@ const ToyDetails = () => {
         setDetails(data);
       });
   }, []);
-  console.log(details);
+  // console.log(details);
   const {pictureUrl,description,name,price,quantity,sellerName,sellerEmail,rating}= details
+
+  
   return (
     <div>
-      <div className="hero my-20 min-h-screen bg-base-300 rounded-2xl shadow-2xl">
-        <div className="hero-content items-center text-left gap-5 flex-col lg:flex-row">
+      <div className=" my-20  bg-base-300 rounded-2xl shadow-2xl w-[700px] p-10 mx-auto">
+        <div className="w-[450px] flex items-center justify-between  gap-5 ">
           <img
             src={pictureUrl}
             className=" rounded-lg shadow-2xl"

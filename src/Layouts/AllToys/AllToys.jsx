@@ -1,12 +1,13 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import Toys from "./Toys";
+import useTitle from "../../Hooks/useTitle";
 
 
 const AllToys = () => {
     const [allToys, setAllToys]= useState([]);
     const  toy=allToys.slice(0,20)
-
+useTitle("AllToy")
 
     useEffect(()=>{
         fetch('https://toy-marketplace-server-side-three.vercel.app/allToy')

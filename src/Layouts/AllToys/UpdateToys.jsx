@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthCotext } from '../../Provider/AuthProvider';
 import { useForm } from 'react-hook-form';
+import useTitle from '../../Hooks/useTitle';
 
 const UpdateToys = () => {
     const toy = useLoaderData();
@@ -13,6 +14,7 @@ const UpdateToys = () => {
     const { register, handleSubmit } = useForm();
   const {user} = useContext(AuthCotext)
   // console.log(user);
+  useTitle("UpdateToy")
 
   const onSubmit = (data) => {
     console.log(data);

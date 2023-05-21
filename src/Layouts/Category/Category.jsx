@@ -3,10 +3,13 @@ import { useState, useEffect } from "react";
 import { Tab, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import SingleToy from "./SingleToy";
+import useTitle from "../../Hooks/useTitle";
 
 const Category = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [toyData, setToyData] = useState([]);
+
+  useTitle("Category")
 //   console.log(toyData);
   // const {price}= toyData
   useEffect(() => {

@@ -6,7 +6,9 @@ import img5 from "../../assets/images/img5.jpeg";
 import Collection from "./Collection";
 import Category from "../Category/Category";
 import BestSellCollection from "./BestSellCollection";
+import useTitle from "../../Hooks/useTitle";
 const Home = () => {
+  useTitle("Home")
   return (
     <div className="my-20">
       <div className=" lg:flex items-center justify-between gap-10 ">

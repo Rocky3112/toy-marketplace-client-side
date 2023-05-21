@@ -4,11 +4,12 @@ import { Link, Navigate, useLocation, useNavigate} from "react-router-dom";
 import { AuthCotext } from "../../Provider/AuthProvider";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../../Firebase/firebase.config";
+import useTitle from "../../Hooks/useTitle";
 
 const Login = () => {
   const [error, setError] = useState("");
   const { signIn } = useContext(AuthCotext);
-
+useTitle("Login")
   const handleLogin = (event) => {
     event.preventDefault();
     setError("");

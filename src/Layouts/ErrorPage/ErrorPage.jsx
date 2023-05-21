@@ -2,12 +2,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import error from "../../assets/images/404-error.jpg"
+import useTitle from '../../Hooks/useTitle';
 
 const ErrorPage = () => {
     const navigate = useNavigate();
     const handleBtnBackPage =()=>{
         navigate("/");
     }
+    useTitle("ErrorPage")
     return (
         <div className=''>
             <img className=' w-96 mx-auto' src={error} alt="" />

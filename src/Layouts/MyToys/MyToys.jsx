@@ -2,10 +2,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthCotext } from '../../Provider/AuthProvider';
 import MyToy from './MyToy';
+import useTitle from '../../Hooks/useTitle';
 
 const MyToys = () => {
     const {user} = useContext(AuthCotext);
     const [toys, setToys]=useState([])
+    useTitle("MyToy")
 
     useEffect(()=>{
         fetch(`https://toy-marketplace-server-side-three.vercel.app/myToy?sellerEmail=${user.email}`)

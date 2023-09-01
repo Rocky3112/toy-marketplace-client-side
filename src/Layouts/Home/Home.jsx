@@ -8,7 +8,7 @@ import Category from "../Category/Category";
 import BestSellCollection from "./BestSellCollection";
 import useTitle from "../../Hooks/useTitle";
 import Contact from "../Contact/Contact";
-// import ShowCase from "../ShowCase/ShowCase";
+import ShowCase from "../ShowCase/ShowCase";
 const Home = () => {
   useTitle("Home")
   return (
@@ -51,7 +51,7 @@ const Home = () => {
       </div>
 
       <Collection></Collection>
-      {/* <ShowCase></ShowCase> */}
+      <ShowCase></ShowCase>
       <Category></Category>
       <BestSellCollection></BestSellCollection>
       <Contact></Contact>

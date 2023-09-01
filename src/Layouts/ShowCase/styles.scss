@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'avenir next', avenir, -apple-system, BlinkMacSystemFont,
+      'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial,
+      sans-serif;
+    color: #374047;
+  }
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    width: 100%;
+    background-color: #1e282f;
+  }
+  
+  .info {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 14px;
+    a {
+      color: inherit;
+    }
+  
+    .notice {
+      margin-top: 1rem;
+      font-weight: 100;
+    }
+  
+    @media screen and (min-width: 980px) {
+      font-size: 18px;
+      .notice {
+        display: none;
+      }
+    }
+  }
+  
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+  
+    background: linear-gradient(180deg, #2a3267, #1e282f 100%);
+  }
+  
+  .hero-body {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 3rem 1.5rem;
+  
+    @media screen and (min-width: 980px) {
+      padding: 8rem 1.5rem;
+    }
+  }
+  
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    display: flex;
+    flex: 1 1 auto;
+    padding: 10px;
+    width: 100%;
+    @media screen and (min-width: 980px) {
+      width: 33.33333333333333%;
+    }
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s;
+    will-change: transform;
+  }
+  
+  .card-title {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  .card-body {
+    margin-top: 27px;
+    margin-bottom: 27px;
+    line-height: 1.5;
+    font-size: 16px;
+    @media screen and (min-width: 576px) {
+      font-size: 18px;
+    }
+  }
+  
+  .image-container {
+    margin-top: auto;
+    padding-top: 27px;
+    padding-bottom: 18px;
+    @media screen and (min-width: 576px) {
+      padding-bottom: 30px;
+    }
+  
+    img {
+      width: 100%;
+    }
+  }
+  
+  .image-inner-container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 250px;
+  }
+  
+  .ratio {
+    position: relative;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .ratio-inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  

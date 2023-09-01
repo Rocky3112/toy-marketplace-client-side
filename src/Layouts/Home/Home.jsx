@@ -7,6 +7,8 @@ import Collection from "./Collection";
 import Category from "../Category/Category";
 import BestSellCollection from "./BestSellCollection";
 import useTitle from "../../Hooks/useTitle";
+import Contact from "../Contact/Contact";
+// import ShowCase from "../ShowCase/ShowCase";
 const Home = () => {
   useTitle("Home")
   return (
@@ -26,7 +28,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div className="carousel carousel-center lg:w-[1000px]  lg:h-[90vh] p-4 space-x-4 bg-neutral-300 rounded-box  my-10">
+        <div className="carousel carousel-center lg:w-[1000px]  lg:h-[75vh] p-4 space-x-4 bg-neutral-300 rounded-box  my-10">
           <div className="carousel-item">
             <img src={img1} className="rounded-box w-[400px]  " />
           </div>
@@ -49,8 +51,10 @@ const Home = () => {
       </div>
 
       <Collection></Collection>
+      {/* <ShowCase></ShowCase> */}
       <Category></Category>
       <BestSellCollection></BestSellCollection>
+      <Contact></Contact>
     </div>
   );
 };

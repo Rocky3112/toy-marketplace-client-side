@@ -9,6 +9,7 @@ import BestSellCollection from "./BestSellCollection";
 import useTitle from "../../Hooks/useTitle";
 import Contact from "../Contact/Contact";
 import ShowCase from "../ShowCase/ShowCase";
+import NewArrival from "../NewArrival/NewArrival";
 const Home = () => {
   useTitle("Home")
   return (
@@ -52,6 +53,7 @@ const Home = () => {
 
       <Collection></Collection>
       <ShowCase></ShowCase>
+      {/* <NewArrival></NewArrival> */}
       <Category></Category>
       <BestSellCollection></BestSellCollection>
       <Contact></Contact>

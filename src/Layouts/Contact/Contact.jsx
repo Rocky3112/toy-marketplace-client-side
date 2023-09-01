@@ -25,21 +25,21 @@ const Contact = () => {
             <div className=" min-h-screen">
                 <div>
                    <h3 className="text-4xl font-semibold text-center text-yellow-500 py-3">Contact Info</h3>
-                    <h3 className='text-2xl  px-36'>
+                    <h3 className='text-2xl mx-20'>
                     Let's Connect! Reach out through the Contact Me section to discuss your web development needs, collaborations, or any inquiries. I'm excited to hear from you and explore how we can work together to bring your ideas to life.
                     </h3>
                 </div>
                 <div data-aos="fade-up"
                     data-aos-duration="2000" className="hero-content flex-col lg:flex-row">
-                    <div data-aos="fade-right" className="w-full w-1/2 p-5 rounded-xl ">
+                    <div data-aos="fade-right" className="w-full max-w-xl p-5 rounded-xl ">
                         
                         <div className='sm:p-10 md:p-0 lg:p-2 '>
                             <Lottie animationData={contact} loop={true} className='h-[450px]' />
                         </div>
 
                         <Fade direction='left' className=' ps-28'>
-                        <div className='card'>
-                            <h2 className="text-xl">Phone</h2>
+                        <div className=''>
+                            <h2 className="text-xl shadow-none">Phone</h2>
                             <figure style={{ justifyContent: 'flex-start' }} className='flex items-center' >
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-18 w-12" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
@@ -69,7 +69,7 @@ const Contact = () => {
                         </Fade>
                     </div>
                     <Fade direction='right'>
-                    <div data-aos="fade-left" className="card flex-shrink-0 w-full w-1/2 shadow-xl">
+                    <div data-aos="fade-left" className="card flex-shrink-0 w-full max-w-lg shadow-xl">
                         <div className="card-body">
                             <h3 className="text-md text-center text-primary underline underline-offset-2">Direct Mail</h3>
                             <form ref={form} onSubmit={handleSubmit}>
@@ -89,7 +89,7 @@ const Contact = () => {
                                     <label className="label">
                                         <span className="label-text">Message</span>
                                     </label>
-                                    <textarea required type="text" name='message' rows={8} cols={60} className="textarea textarea-bordered" placeholder="Message"></textarea>
+                                    <textarea required type="text" name='message' rows={8} cols={30} className="textarea textarea-bordered" placeholder="Message"></textarea>
                                 </div>
                                 <div className="form-control mt-6">
                                     <input type='submit' value='Send' className="btn bg-yellow-500 border-0 hover:bg-green-500"></input>

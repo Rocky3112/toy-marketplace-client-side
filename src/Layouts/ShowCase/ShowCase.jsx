@@ -10,21 +10,21 @@ function ShowCase() {
       title: 'Build faster ⚡️',
       description:
         'Create a React web app in the fraction of the time using our library of themes and building blocks. We have everything from navbars and content grids to authentication flows and commenting systems. New blocks are added every week.',
-      image: 'https://6jlvz1j5q3.csb.app/undraw_collection.svg',
+      image: 'https://greatyellowbrick.co.za/cdn/shop/products/lego-speed-champions-fast-and-furious-1970-dodge-charger-r-t-76912_001_1024x1024@2x.jpg?v=1657290729',
       imageRatio: 784 / 1016,
     },
     {
       title: 'Tweak anything 👩‍🎨',
       description:
         'Built with developers in mind. Change element structure, edit CSS, create components, add props and state. We give you access to the underlying React code so you can do what you need right in our tool.',
-      image: 'https://6jlvz1j5q3.csb.app/undraw_upload.svg',
+      image: 'https://www.jiomart.com/images/product/original/rv6oyoixpm/navrangi-high-speed-racing-batman-theme-fast-remote-control-car-for-kids-red-product-images-orv6oyoixpm-p592368164-0-202207051423.jpg?im=Resize=(1000,1000)',
       imageRatio: 839 / 1133,
     },
     {
       title: 'Export your code 🚀',
       description:
         "Export your project as a high-quality React codebase. We're lazer focused on helping you build and iterate quickly, but expect that you'll eventually want to export and wrap things up in your favorite code editor.",
-      image: 'https://6jlvz1j5q3.csb.app/undraw_static_assets.svg',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJQqlhJuKPfRtD5ZAgP0eIKNhqhuabze9xyw&usqp=CAU',
       imageRatio: 730 / 1030,
     },
   ];
@@ -94,8 +94,26 @@ function Card({ card }) {
     >
       <div className="card-title">{card.title}</div>
       <div className="card-body">{card.description}</div>
-      {/* <Image ratio={card.imageRatio} src={card.image} /> */}
+      <Image ratio={card.imageRatio} src={card.image} />
     </animated.div>
+  );
+}
+function Image({ ratio, src }) {
+  return (
+    <div className="image-container">
+      <div className="image-inner-container">
+        <div
+          className="ratio"
+          style={{
+            paddingTop: ratio * 100 + '%',
+          }}
+        >
+          <div className="ratio-inner">
+            <img src={src} alt="Card" />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 

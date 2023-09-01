@@ -3,6 +3,9 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import error from "../../assets/images/404-error.jpg"
 import useTitle from '../../Hooks/useTitle';
+import { LottiePlayer } from 'lottie-react';
+import anim from '../../../public/animation_lm0oifia.json'
+import Lottie from "lottie-react";
 
 const ErrorPage = () => {
     const navigate = useNavigate();
@@ -12,9 +15,11 @@ const ErrorPage = () => {
     useTitle("ErrorPage")
     return (
         <div className=''>
-            <img className=' w-96 mx-auto' src={error} alt="" />
+            {/* <img className=' w-96 mx-auto' src={error} alt="" /> */}
             <div className='mt-10 flex items-center justify-center'>
-            <h1 className=' text-4xl font-semibold'>404 Page Not Found</h1><br />
+            <Lottie animationData={anim} loop={true}
+            style={{ width: '500px', height: '500px' }} className='' /> <br />
+            <h1 className=' text-4xl font-semibold'> Page Not Found</h1><br />
             
         </div>
         <div className='flex items-center justify-center'>

@@ -26,7 +26,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div className="carousel carousel-center lg:w-[1000px]  lg:h-[70vh] p-4 space-x-4 bg-neutral-300 rounded-box  my-10">
+        <div className="carousel carousel-center lg:w-[1000px]  lg:h-[90vh] p-4 space-x-4 bg-neutral-300 rounded-box  my-10">
           <div className="carousel-item">
             <img src={img1} className="rounded-box w-[400px]  " />
           </div>

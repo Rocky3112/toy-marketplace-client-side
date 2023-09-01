@@ -9,7 +9,7 @@ import img2 from "../../assets/images/img1.jpg"
 const Collection = () => {
     return (
         
-        <div className="my-20">
+        <div className="my-20 mx-10">
             <h1 className=" text-center text-amber-400 my-8 font-bold text-4xl"> Our Collections</h1>
             <div className=" relative  grid lg:grid-cols-4 sm:grid-cols-1 gap-7 justify-between"> 
             <img className="transition-transform duration-300 w-full lg:w-64 lg:h-64 hover:scale-110 rounded-lg" src={pic1} alt="" />

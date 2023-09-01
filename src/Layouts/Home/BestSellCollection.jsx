@@ -19,7 +19,7 @@ const BestSellCollection = () => {
   }, []);
 
   return (
-    <div className="my-16">
+    <div className="my-16 mx-10">
       <div className="my-7 text-left">
         <h1 className="text-amber-500 text-4xl font-semibold">BEST SELLERS</h1>
         <p>Do not miss the current offer</p>
